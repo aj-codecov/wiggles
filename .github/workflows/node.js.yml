@@ -32,9 +32,10 @@ jobs:
     - name: Codecov
       # You may pin to the exact commit or the version.
       # uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d
-      uses: codecov/codecov-action@v3.1.4
-      env: 
-        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+      uses: pip install codecov-cli  
+            codecovcli create-commit -t {$CODECOV_TOKEN}
+            codecovcli create-report -t {$CODECOV_TOKEN}
+            codecovcli do-upload -t {$CODECOV_TOKEN}
       with:
         flags: ${{ matrix.node-version }}
         fail_ci_if_error: true
