@@ -13,7 +13,7 @@ import {
 import { randomIntFromInterval } from "./utility.js";
 
 export function f1_01() {
-  const index = randomIntFromInterval(0, 9);
+  const index = randomIntFromInterval(0, 200);
   switch (index) {
     case 0:
       return f2_01();
